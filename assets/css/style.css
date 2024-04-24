@@ -1909,15 +1909,3 @@ h1 {
   color: #fff;
   border-color: #fff;
 }
-p {
-  text-align: center;
-  padding-top: 2em;
-  color: grey;
-}
-p a {
-  color: #e1e1e1;
-  text-decoration: none;
-}
-p a:hover {
-  color: #fff;
-}
