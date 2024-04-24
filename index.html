@@ -46,8 +46,8 @@
         </ul>
         <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-                <a class="nav-link" href="tel:+18884044876">
-                    <i class="fa fa-phone"></i> +1 (888) 404-4876
+                <a class="nav-link" href="tel:+18002740092">
+                    <i class="fa fa-phone"></i> +1 (800) 274-0092
                 </a>
             </li>
         </ul>
@@ -63,11 +63,70 @@
               <h6>We are One Stop Solution</h6>
               <h6>We Provide Satellite Tv, Cable & Internet services</h6>
               <div class='item-btn'>
-                <a type="button" href="tel:+18884044876" class="btn btn-primary">Call Now</a>
+                <a type="button" href="tel:+18002740092" class="btn btn-primary">Call Now</a>
               </div>
           </div>
       </div>
   </section>
+
+  <!-- Button removed -->
+  <div class="modal fade" id="ModalForm" tabindex="-1" aria-labelledby="ModalFormLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered"> <!-- Changed modal size to modal-sm -->
+      <div class="modal-content">
+        <div class="modal-body">
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            <div class="myform bg-dark">
+                <h4 class="text-center">Want High Speed Internet?</h4>
+                <h4 class="text-center">Simply fill out this Form!</h4>
+                <p>No long waits, no complicated processes - just fill out this form and get ready for a world of high-speed internet</p>
+                <form id="signupForm">
+                    <div class="mb-3 mt-4">
+                        <label for="exampleInputName" class="form-label">Name</label>
+                        <input type="text" class="form-control" placeholder="Enter fullname" id="exampleInputName" name="name">
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputPhoneNumber" class="form-label">Phone Number</label>
+                        <input type="tel" class="form-control" placeholder="Enter phone No" id="exampleInputPhoneNumber" name="phone">
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputEmail" class="form-label">Email address</label>
+                        <input type="email" class="form-control" placeholder="Enter Email" id="exampleInputEmail" aria-describedby="emailHelp" name="email">
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputCity" class="form-label">City</label>
+                        <input type="text" class="form-control" placeholder="Enter City" id="exampleInputCity" name="city">
+                    </div>
+                    <button type="submit" class="btn btn-light mt-3">Sign Up</button>
+                </form>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+<script>
+  // Trigger modal on page load
+  window.addEventListener('DOMContentLoaded', (event) => {
+      var myModal = new bootstrap.Modal(document.getElementById('ModalForm'), {
+          keyboard: false
+      });
+      myModal.show();
+  });
+
+  // Handle form submission
+  document.getElementById('signupForm').addEventListener('submit', function(event) {
+      event.preventDefault(); // Prevent form submission
+      // You can process the form data here
+      var formData = new FormData(this);
+      for (const pair of formData.entries()) {
+          console.log(pair[0] + ': ' + pair[1]);
+      }
+      // Close the modal after form submission
+      var modal = bootstrap.Modal.getInstance(document.getElementById('ModalForm'));
+      modal.hide();
+  });
+</script>
 
   <section class="section contact" data-section="section5">
     <div class="container">
@@ -220,7 +279,7 @@
                         </ul>
                     </div>
                     <div class='item-btn'>
-                      <a type="button" href="tel:+18884044876" class="btn btn-primary fa fa-phone"> Call Now</a>
+                      <a type="button" href="tel:+18002740092" class="btn btn-primary fa fa-phone"> Call Now</a>
                     </div>  
                 </div>
               </div>
@@ -247,7 +306,7 @@
                         </ul>
                     </div>
                     <div class='item-btn'>
-                      <a type="button" href="tel:+18884044876" class="btn btn-primary fa fa-phone"> Call Now</a>
+                      <a type="button" href="tel:+18002740092" class="btn btn-primary fa fa-phone"> Call Now</a>
                     </div>  
                 </div>
               </div>
@@ -291,10 +350,10 @@
             <h4>Contact info</h4>
             <ul class="contacts-list">
                 <li>
-                    <p><i class="icon icon-House"></i> 7232, Britton Ave Elmhurst NY 11373</p>
+                    <p><i class="icon icon-House"></i> 4539 Robinson St Flusing, NY 11355</p>
                 </li>
                 <li>
-                    <p><i class="icon icon-Phone2"></i><a href="tel:+18884044876"> +1 (888) 404-4876</a> </p>
+                    <p><i class="icon icon-Phone2"></i><a href="tel:+18002740092"> +1 (800) 274-0092</a> </p>
                 </li>
                 <li>
                     <p><i class="icon icon-Mail"></i><a href="mailto:info@webmatixllc.us">info@webmatixllc.us</a> </p>

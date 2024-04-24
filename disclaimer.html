@@ -47,8 +47,8 @@
         </ul>
         <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-                <a class="nav-link" href="tel:+18884044876">
-                    <i class="fa fa-phone"></i> +1 (888) 404-4876
+                <a class="nav-link" href="tel:+18002740092">
+                    <i class="fa fa-phone"></i> +1 (800) 274-0092
                 </a>
             </li>
         </ul>
@@ -169,10 +169,10 @@
             <h4>Contact info</h4>
             <ul class="contacts-list">
                 <li>
-                    <p><i class="icon icon-House"></i> 7232, Britton Ave Elmhurst NY 11373</p>
+                    <p><i class="icon icon-House"></i> 4539 Robinson St Flusing, NY 11355</p>
                 </li>
                 <li>
-                    <p><i class="icon icon-Phone2"></i><a href="tel:+18884044876"> +1 (888) 404-4876</a> </p>
+                    <p><i class="icon icon-Phone2"></i><a href="tel:+18002740092"> +1 (800) 274-0092</a> </p>
                 </li>
                 <li>
                     <p><i class="icon icon-Mail"></i><a href="mailto:info@webmatixllc.us">info@webmatixllc.us</a> </p>
@@ -204,77 +204,7 @@
     <script src="assets/js/video.js"></script>
     <script src="assets/js/slick-slider.js"></script>
     <script src="assets/js/custom.js"></script>
-    <script>
-        //according to loftblog tut
-        $('.nav li:first').addClass('active');
-
-        var showSection = function showSection(section, isAnimate) {
-          var
-          direction = section.replace(/#/, ''),
-          reqSection = $('.section').filter('[data-section="' + direction + '"]'),
-          reqSectionPos = reqSection.offset().top - 0;
-
-          if (isAnimate) {
-            $('body, html').animate({
-              scrollTop: reqSectionPos },
-            800);
-          } else {
-            $('body, html').scrollTop(reqSectionPos);
-          }
-        };
-
-        $("div.features-post").hover(
-          function () {
-            $(this).find("div.content-hide").slideToggle("medium");
-          },
-          function () {
-            $(this).find("div.content-hide").slideToggle("medium");
-          }
-        );
-
-        var checkSection = function checkSection() {
-          $('.section').each(function () {
-            var
-            $this = $(this),
-            topEdge = $this.offset().top - 80,
-            bottomEdge = topEdge + $this.height(),
-            wScroll = $(window).scrollTop();
-            if (topEdge < wScroll && bottomEdge > wScroll) {
-              var
-              currentId = $this.data('section'),
-              reqLink = $('a').filter('[href*=\\#' + currentId + ']');
-              reqLink.closest('li').addClass('active').
-              siblings().removeClass('active');
-            }
-          });
-        };
-
-        $('.main-menu, .scroll-to-section').on('click', 'a', function (e) {
-          if($(e.target).hasClass('external')) {
-            return;
-          }
-          e.preventDefault();
-          $('#menu').removeClass('active');
-          showSection($(this).attr('href'), true);
-        });
-
-        $(window).scroll(function () {
-          checkSection();
-        });
-
-        
-        $(document).ready(function() {
-          $('body').addClass('js');
-          var $menu = $('#menu'),
-            $menulink = $('.menu-link');
-          
-        $menulink.click(function() {
-          $menulink.toggleClass('active');
-          $menu.toggleClass('active');
-          return false;
-        });});
-
-    </script>
+    
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
 </body>
