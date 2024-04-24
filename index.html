@@ -96,6 +96,15 @@
                         <label for="exampleInputCity" class="form-label">City</label>
                         <input type="text" class="form-control" placeholder="Enter City" id="exampleInputCity" name="city">
                     </div>
+                    <div class="mb-3 form-check">
+                      <input type="checkbox" class="form-check-input" id="exampleCheck" required>
+                      <label class="form-check-label" for="exampleCheck">
+                          By Providing my phone number to Webmatix LLc, I agree and acknowledge that webmatix llc
+                          <span id="additionalText" style="display: none;"> may send text messages to my wireless phone number for any purpose. For more information on how your data will be handled please visit <a href="privacy-policy.html">Privacy Policy.</a></span>
+                          <a href="#" id="readMoreLink">Read More</a>
+                      </label>
+                  </div>
+                  
                     <button type="submit" class="btn btn-light mt-3">Sign Up</button>
                 </form>
             </div>
@@ -126,6 +135,23 @@
       var modal = bootstrap.Modal.getInstance(document.getElementById('ModalForm'));
       modal.hide();
   });
+
+  document.addEventListener("DOMContentLoaded", function() {
+        var readMoreLink = document.getElementById("readMoreLink");
+        var additionalText = document.getElementById("additionalText");
+
+        readMoreLink.addEventListener("click", function(event) {
+            event.preventDefault();
+            if (additionalText.style.display === "none") {
+                additionalText.style.display = "inline"; // Show additional text
+                readMoreLink.textContent = "Read Less";
+            } else {
+                additionalText.style.display = "none"; // Hide additional text
+                readMoreLink.textContent = "Read More";
+            }
+        });
+    });
+
 </script>
 
   <section class="section contact" data-section="section5">
